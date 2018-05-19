@@ -1,0 +1,9 @@
+C:\Users\MarcoAguilar\Documents\Visual Studio 2017\Projects\test3\CopaRusia2018\CopaRusia2018\bin\Debug\netcoreapp1.1\CopaRusia2018.deps.json
+C:\Users\MarcoAguilar\Documents\Visual Studio 2017\Projects\test3\CopaRusia2018\CopaRusia2018\bin\Debug\netcoreapp1.1\CopaRusia2018.runtimeconfig.json
+C:\Users\MarcoAguilar\Documents\Visual Studio 2017\Projects\test3\CopaRusia2018\CopaRusia2018\bin\Debug\netcoreapp1.1\CopaRusia2018.runtimeconfig.dev.json
+C:\Users\MarcoAguilar\Documents\Visual Studio 2017\Projects\test3\CopaRusia2018\CopaRusia2018\bin\Debug\netcoreapp1.1\CopaRusia2018.dll
+C:\Users\MarcoAguilar\Documents\Visual Studio 2017\Projects\test3\CopaRusia2018\CopaRusia2018\bin\Debug\netcoreapp1.1\CopaRusia2018.pdb
+C:\Users\MarcoAguilar\Documents\Visual Studio 2017\Projects\test3\CopaRusia2018\CopaRusia2018\obj\Debug\netcoreapp1.1\CopaRusia2018.AssemblyInfo.cs
+C:\Users\MarcoAguilar\Documents\Visual Studio 2017\Projects\test3\CopaRusia2018\CopaRusia2018\obj\Debug\netcoreapp1.1\CopaRusia2018.dll
+C:\Users\MarcoAguilar\Documents\Visual Studio 2017\Projects\test3\CopaRusia2018\CopaRusia2018\obj\Debug\netcoreapp1.1\CopaRusia2018.pdb
+C:\Users\MarcoAguilar\Documents\Visual Studio 2017\Projects\test3\CopaRusia2018\CopaRusia2018\obj\Debug\netcoreapp1.1\CopaRusia2018.csprojResolveAssemblyReference.cache
