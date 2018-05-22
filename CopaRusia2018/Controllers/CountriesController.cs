@@ -20,9 +20,33 @@ namespace CopaRusia2018.Controllers
         }
 
         // GET: Countries
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string searchString)
         {
-            return View(await _context.Countries.ToListAsync());
+            //return View(await _context.Countries.ToListAsync());
+
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+            ViewData["CurrentFilter"] = searchString;
+            var students = from s in _context.Countries
+                           select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                students = students.Where(s => s.Name.Contains(searchString)
+                || s.Continent.Contains(searchString));
+            }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    students = students.OrderByDescending(s => s.Name);
+                    break;
+                case "Date":
+                    students = students.OrderBy(s => s.Foundation);
+                    break;                
+                default:
+                    students = students.OrderBy(s => s.Continent);
+                    break;
+            }
+            return View(await students.AsNoTracking().ToListAsync());
         }
 
         // GET: Countries/Details/5
@@ -33,8 +57,16 @@ namespace CopaRusia2018.Controllers
                 return NotFound();
             }
 
+            //var country = await _context.Countries
+            //    .SingleOrDefaultAsync(m => m.ID == id);
+
             var country = await _context.Countries
-                .SingleOrDefaultAsync(m => m.ID == id);
+            .Include(s => s.Players)
+            //.ThenInclude(e => e.Course)
+            .AsNoTracking()
+            .SingleOrDefaultAsync(m => m.ID == id);
+
+
             if (country == null)
             {
                 return NotFound();

@@ -28,6 +28,41 @@
         <dd>
             @Html.DisplayFor(model => model.Foundation)
         </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Players)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>LastName</th>
+                    <th>FirstName</th>
+                    <th>BornDate</th>
+                </tr>
+                @foreach (var item in Model.Players)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BornDate)
+                        </td>
+                        @*<td>
+                            <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                        </td>*@
+                    </tr>
+
+                    
+                }
+            </table>
+        </dd>
+
     </dl>
 </div>
 <div>
